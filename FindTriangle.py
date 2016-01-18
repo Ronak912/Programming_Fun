@@ -60,6 +60,6 @@ def getAllTriangle(inputlst):
         i += 1
     print "All Triangle: ", trianglelst
 
-findTriangle([4, 5, 12, 13, 15, 20])
-getAllTriangle([4, 5, 6, 7, 12, 13, 15, 20])
+#findTriangle([4, 5, 12, 13, 15, 20])
+getAllTriangle([4, 5, 12, 13, 15, 20])
 

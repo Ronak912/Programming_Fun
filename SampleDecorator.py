@@ -52,7 +52,7 @@ class Person(object):
 
 my_person = Person()
 
-#print my_person.get_fullname()
+print my_person.get_fullname()
 
 
 #from functools import wraps
@@ -71,4 +71,4 @@ def example():
     return 'Called example function'
 
 
-example()
+#example()

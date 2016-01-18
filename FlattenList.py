@@ -1,6 +1,23 @@
 A = [2, 3, [1, 2], [5, [6, [3]], 7], 2]
 #sorted(flatten(A)) == sorted([2, 3, 1, 2, 5, 6, 3, 7, 2])
 
+
+def FlattenListUsingIter1(temp):
+    tmplst = []
+    for value in temp:
+        if not isinstance(value, list):
+            tmplst.append(value)
+        else:
+            newtmplst = value
+            for innerval in newtmplst:
+                if not isinstance(innerval, list):
+                    tmplst.append(innerval)
+                else:
+                    newtmplst.extend(innerval)
+    print tmplst
+
+#print "Flatten List Using Iteraton: ", FlattenListUsingIter1(A)
+
 def FlattenListUsingIter(temp):
     tmplst = []
     while temp:
@@ -13,7 +30,7 @@ def FlattenListUsingIter(temp):
             tmplst.append(currval)    
     return tmplst
 
-print "Flatten List Using Iteraton: ", FlattenListUsingIter(A)
+
 
 # Using Recursion
 
@@ -35,4 +52,25 @@ def getValueFromList(newlst, currlist):
     return newlst
 
 
-print "Flatten List Using Recursion:", getFlattenList(A)
+
+def getFlattenList11(inlst):
+    newlst = []
+    exposedlst = []
+    for val in inlst:
+        if isinstance(val, int):
+            newlst.append(val)
+        elif isinstance(val, list):
+            exposedlst.extend(val)
+    while exposedlst:
+        currval = exposedlst.pop()
+        if isinstance(currval, list):
+            exposedlst.extend(currval)
+        else:
+            newlst.append(currval)
+    print "List: ", newlst
+
+
+
+
+print "Flatten List Using Iteraton: ", getFlattenList11(A)
+#print "Flatten List Using Recursion:", getFlattenList(A)

@@ -13,6 +13,7 @@ def reverseString(intputstr):
 
 def reverseWords(inputstr):
     revstr = reverseString(inputstr)
+    print "Reverse String: ", revstr
     outputstr = ''
     tmpstr = ''
     for i, char in enumerate(revstr):
@@ -41,6 +42,7 @@ def reverseWords(inputstr):
 
 #print reverseString('ronaka')
 print reverseWords('Ronak What are you doing')
+#print reverseString1('Ronak What are you doing')
 
 
 

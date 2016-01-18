@@ -8,11 +8,7 @@ def checkNumber1(inputstr):
     p1 = re.compile(pattern)
 
     m = p1.match(inputstr)
-    if m:
-        return True
-    else:
-        return False
-    #return True if m else False
+    return True if m else False
 
 
 def isNumber2(inputstr1):
@@ -45,5 +41,5 @@ def isNumber(inputstr):
     return isnumber
 
 print isNumber('123456')
-print checkNumber1('-12.345678')
+print checkNumber1('-12.345678hjkk')
 print isNumber2('+2342341.3244234')

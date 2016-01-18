@@ -34,4 +34,4 @@ def mergeInterval(origlist, newinterval):
 
 if __name__ == '__main__':
     origlist = [[-10, -1],[0, 2],[4, 10]]
-    mergeInterval(origlist, [1, 6])
+    mergeInterval(origlist, [1, 5])
