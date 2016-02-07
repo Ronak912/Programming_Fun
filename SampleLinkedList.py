@@ -55,8 +55,6 @@ class LinkedList:
         print "Not in List"
         return False
 
-
-
         # new_node.next = self.cur_node # link the new node to the 'previous' node.
         # self.cur_node = new_node #  set the current node to the new one.
 

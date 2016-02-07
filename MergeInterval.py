@@ -3,7 +3,7 @@
 # Example: [-10, -1], [0,2], [4,10] insert [-5, 1] output: [-10, 2], [4, 10]
 
 
-def mergeInterval(origlist, newinterval):
+def mergeInterval11(origlist, newinterval):
     newlst = []
     while origlist:
         oldinterval = origlist.pop(0)
@@ -32,6 +32,21 @@ def mergeInterval(origlist, newinterval):
     print "Final List: ", newlst
 
 
+def mergeInterval(data):
+    data = sorted(data)
+    print "sorted Data: ", data
+    stored = list(data[0])
+    newlst = []
+    for start, end in data:
+        if start < stored[1]:
+            stored[1] = max(stored[1], end)
+        else:
+            newlst.append(tuple(stored))
+            stored = [start, end]
+    newlst.append(tuple(stored))
+    return newlst
+
+
 if __name__ == '__main__':
-    origlist = [[-10, -1],[0, 2],[4, 10]]
-    mergeInterval(origlist, [1, 5])
+    origlist = [(4,9), (20, 22), (1, 3), (24, 32), (23, 31), (12, 15), (8,13), (-10, -5), (-15, -1)]
+    print mergeInterval(origlist)

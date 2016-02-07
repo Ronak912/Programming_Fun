@@ -1,8 +1,14 @@
 tmp = [1,2,3,4,5,6,7]
 
 fromidx = 6
-toidx = 0
+toidx = 1
 tmpval = tmp[fromidx]
+
+# del tmp[fromidx]
+# tmp.insert(toidx, tmpval)
+#
+# print tmp
+
 newlst = []
 
 for idx, val in enumerate(tmp):
