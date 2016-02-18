@@ -1,5 +1,5 @@
 class Deque(object):
-    def __init__(self, size = 100):
+    def __init__(self, size=100):
         self.items = []
         self.__currsize = 0
         self.size = size

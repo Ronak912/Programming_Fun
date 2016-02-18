@@ -31,9 +31,9 @@ def partition(alist, first, last):
             alist[leftmark] = alist[rightmark]
             alist[rightmark] = temp
 
-        temp = alist[first]
-        alist[first] = alist[rightmark]
-        alist[rightmark] = temp
+    temp = alist[first]
+    alist[first] = alist[rightmark]
+    alist[rightmark] = temp
 
     return rightmark
 

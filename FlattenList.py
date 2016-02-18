@@ -30,6 +30,20 @@ def FlattenListUsingIter(temp):
             tmplst.append(currval)    
     return tmplst
 
+def FlattenListUsingIter11(inlst):
+    tmplst = []
+    for currval in inlst:
+        #temp = temp[1:]  # if len(temp) > 1 else [temp[0]] if temp else []
+        if isinstance(currval, list):
+            for innerval in currval:
+                if isinstance(innerval, list):
+                    inlst.extend(innerval)
+                else:
+                    tmplst.append(innerval)
+        else:
+            tmplst.append(currval)
+    return tmplst
+
 
 
 # Using Recursion
@@ -71,6 +85,6 @@ def getFlattenList11(inlst):
 
 
 
-
-print "Flatten List Using Iteraton: ", getFlattenList11(A)
+#print "Flatten List Using Iteraton: ", getFlattenList11(A)
+print "Flatten List Using Iteraton: ", FlattenListUsingIter11(A)
 #print "Flatten List Using Recursion:", getFlattenList(A)

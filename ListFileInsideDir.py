@@ -13,7 +13,7 @@
 import os
 
 for dirs in os.listdir('/Users/Ronak/Public'):
-     print "Dirs: ", dirs
+    print "Dirs: ", dirs
 
 
 outputlst = []

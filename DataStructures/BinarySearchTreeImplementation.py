@@ -63,14 +63,14 @@ class BinarySearchTree:
     def _put(self,key,val,currentNode):
         if key < currentNode.key:
             if currentNode.hasLeftChild():
-                   self._put(key,val,currentNode.leftChild)
+                self._put(key,val,currentNode.leftChild)
             else:
-                   currentNode.leftChild = TreeNode(key,val,parent=currentNode)
+                currentNode.leftChild = TreeNode(key,val,parent=currentNode)
         else:
             if currentNode.hasRightChild():
-                   self._put(key,val,currentNode.rightChild)
+                self._put(key,val,currentNode.rightChild)
             else:
-                   currentNode.rightChild = TreeNode(key,val,parent=currentNode)
+                currentNode.rightChild = TreeNode(key,val,parent=currentNode)
 
     def __setitem__(self,k,v):
        self.put(k,v)
@@ -210,6 +210,16 @@ class BinarySearchTree:
                  for elem in self.rightChild:
                     yield elem
 
+    def getMaxDepth(self, node):
+        if not node:
+            return 0
+
+        left = self.getMaxDepth(node.leftChiLd)
+        right = self.getMaxDepth(node.rightChild)
+
+        totaldepth = 1 + (left if left > right else right)
+        return totaldepth
+
 
 if __name__ == '__main__':
 
@@ -221,5 +231,9 @@ if __name__ == '__main__':
 
     print(mytree[6])
     print(mytree[2])
+
+    #print "Root: ", mytree.root.leftChiLd, mytree.root.rightChiLd
+
+    print mytree.getMaxDepth(mytree.root)
     # for node in mytree:
     #     print node

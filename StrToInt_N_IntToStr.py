@@ -35,10 +35,12 @@ def inttoStr(inputnum):
         tmplst.append(str(currdigit))
 
     newstr = '-' if isNeg else ''
-    index = len(tmplst)
-    while index > 0:
-        index -= 1
-        newstr += tmplst[index]
+    while tmplst:
+        newstr += tmplst.pop()
+    # index = len(tmplst)
+    # while index > 0:
+    #     index -= 1
+    #     newstr += tmplst[index]
 
     print "Number To String: ", newstr
 

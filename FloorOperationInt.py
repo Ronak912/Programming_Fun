@@ -11,8 +11,8 @@ def floor(a, b):
             if a < 0:
                 break
         else:
-            a = -a - b
-            a = -a
+            a = a + b  # a is -ve number so add b to reach to zero
+            # a = -a
             if a > 0:
                 count += 1
                 break
@@ -20,4 +20,5 @@ def floor(a, b):
     return count*sign
 
 if __name__ == "__main__":
+    print floor(13, 2)
     print floor(-13, 2)

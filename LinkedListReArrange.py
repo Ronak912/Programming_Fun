@@ -26,34 +26,20 @@ def mergeLinkedList(first, second):
     if not first:
         return second
 
-    # newlst = first
-    # newlst.next = second
-    # return newlst
-    # currfirst, currsecond = first.next, second.next
-
     tmpnode = SampleLinkedList.Node(0)
 
     newlst = tmpnode
     currfirst, currsecond = first, second
     while currfirst and currsecond:
-        print "inside loop: ", currfirst.data, currsecond.data
-        # newlst.next = currfirst
-        # newlst = newlst.next
-        #
-        # newlst.next = currsecond
-        # newlst = newlst.next
-
+        #print "inside loop: ", currfirst.data, currsecond.data
+        newlst.next = currfirst
+        newlst = newlst.next
         currfirst = currfirst.next
+
+        newlst.next = currsecond
+        newlst = newlst.next
         currsecond = currsecond.next
 
-
-    # while currfirst:
-    #     newlst.next = currfirst
-    #     currfirst = currfirst.next
-    #
-    # while currsecond:
-    #     newlst.next = currsecond
-    #     currsecond = currsecond.next
     newlst = tmpnode.next
     return newlst
 
@@ -83,5 +69,5 @@ if __name__ == '__main__':
     print "\n\n"
 
     resultlist = mergeLinkedList(first, revsecond)
-    print "here"
+    print "Final Merged List"
     ll.list_print(resultlist)

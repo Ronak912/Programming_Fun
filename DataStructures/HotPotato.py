@@ -18,5 +18,5 @@ def hotPotato(namelist, num):
 
 
 if __name__ == '__main__':
-    tmp = hotPotato(["Bill","David","Susan","Jane","Kent","Brad"], random.randint(7, 12))
+    tmp = hotPotato(["Bill", "David", "Susan", "Jane", "Kent", "Brad"], random.randint(7, 12))
     print tmp

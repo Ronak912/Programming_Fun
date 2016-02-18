@@ -22,7 +22,7 @@ def findLongestPalindrome(a, lps):
 
     for cl in xrange(2, n+1):
         for i in xrange(0, n-cl+1):
-            j = i + cl -1
+            j = i + cl - 1
             if a[i] == a[j] and cl == 2:
                 lps[i][j] = 2
             elif a[i] == a[j]:

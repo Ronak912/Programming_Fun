@@ -12,7 +12,7 @@
 import os
 
 for dirs in os.listdir('/Users/Ronak/Public'):
-     print "Dirs: ", dirs
+    print "Dirs: ", dirs
 
 
 outputlst = []
@@ -30,8 +30,6 @@ def list_dir(inuputdir, outputlst):
         else:
             print "Dirs: ", fullpath
             list_dir(fullpath, outputlst)
-
-            #childDir(fullpath, outputlst)
 
     return outputlst
 

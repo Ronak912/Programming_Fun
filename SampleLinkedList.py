@@ -59,7 +59,7 @@ class LinkedList:
         # self.cur_node = new_node #  set the current node to the new one.
 
     def list_print(self, head=None):
-        node = head if head else self.cur_node# cant point to ll!
+        node = head if head else self.cur_node  # cant point to ll!
         while node:
             print node.data,
             node = node.next

@@ -7,7 +7,7 @@ def isAnagram(str1, str2):
     if len(str1) != len(str2):
         return False
 
-    dict1, dict2 = {}, {}
+    dict1 = {}
 
     for char in str1:
         if char in dict1:

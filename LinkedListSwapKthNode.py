@@ -69,4 +69,4 @@ if __name__ == '__main__':
     ll.add_node(7)
     ll.add_node(8)
 
-    ll.list_print(swapKthNode(ll.cur_node, 8))
+    ll.list_print(swapKthNode(ll.cur_node, 2))

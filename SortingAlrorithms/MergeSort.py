@@ -1,5 +1,5 @@
 def mergeSort(alist):
-    if len(alist) <=1:
+    if len(alist) <= 1:
         return
 
     mid = len(alist)//2

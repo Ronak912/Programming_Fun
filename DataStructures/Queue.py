@@ -32,4 +32,4 @@ if __name__ == "__main__":
     queue.enqueue(5)
     queue.dequeue()
     queue.dequeue()
-    print str(queue)
+    print queue  # or str(queue)

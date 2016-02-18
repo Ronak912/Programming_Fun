@@ -26,6 +26,8 @@ def sortArray(arr):
 if __name__ == '__main__':
     arr = []
     # Generate random number between 1 to 10
-    for val in xrange(1000000):
+    for val in xrange(100):
         arr.append(random.randint(1, 10))
-    print sortArray(arr)
+    sortedarr = sortArray(arr)
+    print "Total Length: ", len(sortedarr)
+    print sortedarr

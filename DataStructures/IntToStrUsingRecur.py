@@ -4,6 +4,7 @@ stack = Stack.Stack()
 
 def intToStr(innum):
     dividednum = innum // 10
+    #print dividednum
     if dividednum < 1:
         return str(innum)
     else:
@@ -22,4 +23,5 @@ def intToStrUsingStck(innum):
     print res
 
 
-intToStrUsingStck(1234)
+#intToStrUsingStck(9234)
+intToStr(9234)
