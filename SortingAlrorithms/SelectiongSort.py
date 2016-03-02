@@ -1,8 +1,8 @@
-lst = [1,6,4,9,10,2,3]
+lst = [1, 6, 4, 9, 10, 2, 3]
 
 totallen = len(lst)
 
-def swap(lst, i, j ):
+def swap(lst, i, j):
     temp = lst[i]
     lst[i] = lst[j]
     lst[j] = temp

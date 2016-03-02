@@ -26,7 +26,7 @@ def skipMAfterN(head, m, n):
         for i in xrange(0, n):
             t = t.next
             if t is None:
-                return
+                break
 
         curr.next = t.next
         curr = curr.next

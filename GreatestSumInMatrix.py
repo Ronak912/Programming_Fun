@@ -7,7 +7,7 @@ def numberOfPaths(m, n):
         return 1
 
     # If diagonal movements are allowed then the last addition is required.
-    return numberOfPaths(m-1, n) + numberOfPaths(m, n-1) # +  numberOfPaths(m-1,n-1)
+    return numberOfPaths(m-1, n) + numberOfPaths(m, n-1)  # +  numberOfPaths(m-1,n-1)
 
 
 def numberOfPathsUsingDP(m, n):

@@ -10,7 +10,7 @@ def matchParen(inputstr):
                 return False
             prevchar = stack.pop()
             if (prevchar == '(' and char != ')') or  \
-                (prevchar == '{' and char != '}')  or \
+                (prevchar == '{' and char != '}') or \
                 (prevchar == '[' and char != ']'):
                 return False
 

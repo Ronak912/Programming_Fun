@@ -48,7 +48,7 @@ def maxLen(arr):
 
         print i, "==", max_len, "==", curr_sum, "==", hash_map
         if curr_sum in hash_map:
-            max_len = max(max_len, i - hash_map[curr_sum] )
+            max_len = max(max_len, i - hash_map[curr_sum])
         else:
             # else put this sum in dictonary
             hash_map[curr_sum] = i

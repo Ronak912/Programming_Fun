@@ -8,7 +8,7 @@ def secondLeastCommon(inlst):
             hashmap[val] = hashmap[val] + 1
 
     print hashmap
-    return list(sorted(hashmap.items(), key= lambda x: x[1]))[1]
+    return list(sorted(hashmap.items(), key=lambda x: x[1]))[1]
 
 
 if __name__ == '__main__':

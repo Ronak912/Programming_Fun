@@ -5,8 +5,10 @@
 # length of str1 and n is length of str2
 def isSubSequence(string1, string2, m, n):
     # Base Cases
-    if m == 0:    return True
-    if n == 0:    return False
+    if m == 0:
+        return True
+    if n == 0:
+        return False
 
     # If last characters of two strings are matching
     if string1[m-1] == string2[n-1]:
@@ -24,7 +26,6 @@ def isSubSequenceIter(string1, string2, m, n):
             if i == m-1:
                 return True
             i += 1
-
         j += 1
     return False
 

@@ -7,7 +7,7 @@ class Foo (threading.Thread):
         self.__x = x
         threading.Thread.__init__(self)
     def run (self):
-          print str(self.__x)
+        print str(self.__x)
 
 for x in xrange(20):
     Foo(x).start()

@@ -40,9 +40,9 @@ def isCircular(path):
 
         # If move is left or right, then change direction
         if move == 'R':
-            dir = (dir + 1)%4
+            dir = (dir + 1) % 4
         elif move == 'L':
-            dir = (4 + dir - 1)%4
+            dir = (4 + dir - 1) % 4
 
         # If move is Go, then change x or y according to
         # current direction

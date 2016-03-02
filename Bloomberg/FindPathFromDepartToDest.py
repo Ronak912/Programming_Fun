@@ -32,6 +32,8 @@ def findPath(inlst):
         fromset.add(inlst[i+1])
         hashmap[inlst[i]] = inlst[i+1]
 
+    print fromset, hashmap
+
     start = ''
     for key, val in hashmap.iteritems():
         if key not in fromset:

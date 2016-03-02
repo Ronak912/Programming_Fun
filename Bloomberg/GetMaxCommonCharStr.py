@@ -28,7 +28,7 @@ def getMaxStr(instr):
     curchar = instr[0]
     currentrun = 1
     maxrun = 1
-    for idx in xrange(1,len(instr)):
+    for idx in xrange(1, len(instr)):
         if instr[idx] == instr[idx-1]:
             currentrun += 1
             if currentrun > maxrun:

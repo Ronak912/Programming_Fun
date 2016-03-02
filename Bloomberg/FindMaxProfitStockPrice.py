@@ -1,19 +1,20 @@
 # find maximum profit by buying-selling stock only once
 
+import sys
+
 def findMaxProfit(pricelst):
-    maxprofit = -1
-    minprice, maxprice = -1, -1
+    maxprofit = sys.maxint * -1
+    minprice = pricelst[0]
     buyprice, sellprice = -1, -1
     for idx, price in enumerate(pricelst):
         if idx == 0:
-            minprice, maxprice = price, price
-
-        if price > maxprice:
-            maxprice = price
-        elif price < minprice:
-            minprice = price
+            continue
 
         profit = price - minprice
+
+        if price < minprice:
+            minprice = price
+
         if profit > maxprofit:
             maxprofit = profit
             buyprice = minprice
@@ -25,4 +26,4 @@ def findMaxProfit(pricelst):
 
 if __name__ == "__main__":
     # price of stock through out the day
-    findMaxProfit([5, 9, 6, 1, 4, 3, 4, 5, 1, 2, 4, 5, 10])
+    findMaxProfit([5, 9, 6, 1, 4, 3, 4, 5, 11, 2, 4, 5, 10])

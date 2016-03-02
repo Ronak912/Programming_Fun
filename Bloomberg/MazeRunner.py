@@ -14,7 +14,6 @@ def isFoundDestination(matrix, _m, _n):
 
 
 def traverseUtil(matrix, x, y):
-    global count
 
     if x == m-1 and y == n-1:
         return True

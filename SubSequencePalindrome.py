@@ -29,6 +29,7 @@ def findLongestPalindrome(a, lps):
                 lps[i][j] = 2 + lps[i+1][j-1]
             else:
                 lps[i][j] = max(lps[i+1][j], lps[i][j-1])
+    print lps
 
     return lps[0][n-1]
 

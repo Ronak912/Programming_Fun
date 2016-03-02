@@ -29,8 +29,7 @@ def countDistinctElement(inlst, k):
             hashmap[val] = 1
             distinctcount += 1
         else:
-            tmpcnt = hashmap.get(val, 0)
-            hashmap[val] = tmpcnt+1
+            hashmap[val] = hashmap.get(val, 0) + 1
 
     print distinctcount
 
@@ -42,16 +41,14 @@ def countDistinctElement(inlst, k):
             distinctcount -= 1
             del hashmap[prevval]
         else:
-            tmpcount = hashmap[prevval]
-            hashmap[prevval] = tmpcount-1
+            hashmap[prevval] -= 1
 
         currval = inlst[i]
         if currval not in hashmap:
             distinctcount += 1
             hashmap[currval] = 1
         else:
-            tmpcnt = hashmap[currval]+1
-            hashmap[currval] = tmpcnt
+            hashmap[currval] += 1
         print distinctcount
 
 
