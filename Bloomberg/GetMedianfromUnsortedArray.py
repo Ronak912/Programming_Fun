@@ -12,7 +12,7 @@ def findMedian(alist1):
 
 def quickSortHelper(alist1, first, last):
     global totallen, medianvals
-    print first, last
+    # print first, last
 
     if first == last:
         if totallen % 2 != 0 and totallen//2 == first:

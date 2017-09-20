@@ -1,5 +1,4 @@
 
-
 def binarySearchRecur(inlst, item):
     if len(inlst) == 0:
         return False
@@ -12,6 +11,7 @@ def binarySearchRecur(inlst, item):
     else:
         binarySearchRecur(inlst[:mid], item)
     return False
+
 
 def binarySearchIter(inlst, item):
     if len(inlst) == 0 or (len(inlst) == 1 and inlst[0] != item):
@@ -34,6 +34,6 @@ def binarySearchIter(inlst, item):
     return False
 
 if __name__ == "__main__":
-    lst = [1,2,3,4,5,6,7,8,9]
+    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     # print binarySearchRecur(lst, 14)
     print binarySearchIter(lst, 7)

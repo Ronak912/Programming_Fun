@@ -33,7 +33,7 @@ class HashMapArray(object):
             return False
 
         size = len(self.__mylist)
-        lastvalue = self.__mylist[size -1]
+        lastvalue = self.__mylist[size - 1]
         valueidx = self.__hashmap.get(value, 0)
 
         # delete entry from hashmap and update index of last array element

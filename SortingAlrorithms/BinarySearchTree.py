@@ -1,5 +1,5 @@
 class TreeNode:
-    def __init__(self,key,val,left=None,right=None,parent=None):
+    def __init__(self, key, val, left=None, right=None, parent=None):
         self.key = key
         self.payload = val
         self.leftChild = left
@@ -98,6 +98,7 @@ class BinarySearchTree:
         return self.get(key)
 
     def __contains__(self, key):
+        print "Containsss"
         if self._get(key, self.root):
             return True
         else:
@@ -117,7 +118,7 @@ class BinarySearchTree:
         else:
             raise KeyError('Error, key not in tree')
 
-    def __delitem__(self,key):
+    def __delitem__(self, key):
         self.delete(key)
 
     def spliceOut(self):
@@ -199,7 +200,6 @@ class BinarySearchTree:
                                     currentNode.rightChild.rightChild)
 
     def __iter__(self):
-        print "inside"
         if self:
             if self.hasLeftChild():
                 for elem in self.leftChiLd:

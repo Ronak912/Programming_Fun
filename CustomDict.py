@@ -9,9 +9,11 @@ class Mapping(dict):
         return repr(self.__dict__)
 
     def __len__(self):
+        print "Length method: "
         return len(self.__dict__)
 
 mymap = Mapping()
 mymap['r'] = 'ronak'
 print mymap['r']
+print len(mymap)
 

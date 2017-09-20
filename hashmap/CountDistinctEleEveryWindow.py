@@ -29,7 +29,7 @@ def countDistinctElement(inlst, k):
             hashmap[val] = 1
             distinctcount += 1
         else:
-            hashmap[val] = hashmap.get(val, 0) + 1
+            hashmap[val] += 1
 
     print distinctcount
 

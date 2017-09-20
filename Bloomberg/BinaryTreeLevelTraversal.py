@@ -35,7 +35,7 @@ def printGivenLevel(root , level):
 def height(node):
     if node is None:
         return 0
-    else :
+    else:
         # Compute the height of each subtree
         lheight = height(node.left)
         rheight = height(node.right)
@@ -46,6 +46,56 @@ def height(node):
         else:
             return rheight+1
 
+
+count = 0
+# Number of subtree that lies within given range
+# http://www.geeksforgeeks.org/count-bst-subtrees-that-lie-in-given-range/
+def countSubTrees(node, low, high):
+    global count
+
+    if node is None:
+        return True
+
+    islefttreeinrange = True
+    if node.left:
+        islefttreeinrange = countSubTrees(node.left, low, high)
+
+    isrighttreeinrange = True
+    if node.right:
+        isrighttreeinrange = countSubTrees(node.right, low, high)
+
+
+    if node.data >= low and node.data <= high and islefttreeinrange and isrighttreeinrange:
+        count += 1
+        return True
+    return False
+
+
+def getCount(node, low, high):
+    # Base case
+    if not node:
+        return 0
+
+    # Special Optional case for improving efficiency
+    if node.data == low and node.data == high:
+        return 1
+
+    # If current node is in range, then include it in count and
+    # recur for left and right children of it
+    if node.data >= low and node.data <= high:
+        return 1 + getCount(node.left, low, high) + getCount(node.right, low, high)
+
+    # If current node is smaller than low, then recur for right
+    # child
+    elif node.data <= low:
+        return getCount(node.right, low, high)
+
+    # Else recur for left child
+    else:
+        return getCount(node.left, low, high)
+
+
+
 # Driver program to test above function
 root = Node(1)
 root.left = Node(2)
@@ -55,7 +105,18 @@ root.left.right = Node(5)
 root.right.left = Node(6)
 root.right.right = Node(7)
 
-print "Level order traversal of binary tree is -"
-printLevelOrder(root)
+# print "Level order traversal of binary tree is -"
+# printLevelOrder(root)
 
-#This code is contributed by Nikhil Kumar Singh(nickzuck_007)
+bstroot = Node(10)
+bstroot.left = Node(5)
+bstroot.right = Node(50)
+bstroot.left.left = Node(1)
+bstroot.right.left = Node(40)
+bstroot.right.right = Node(100)
+
+countSubTrees(bstroot, 1, 45)
+print "Count: ", count
+
+# http://www.geeksforgeeks.org/count-bst-nodes-that-are-in-a-given-range/
+print "Total Nodes: ", getCount(bstroot, 5, 45)

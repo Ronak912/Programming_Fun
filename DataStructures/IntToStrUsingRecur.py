@@ -3,12 +3,10 @@ import Stack
 stack = Stack.Stack()
 
 def intToStr(innum):
-    dividednum = innum // 10
-    #print dividednum
-    if dividednum < 1:
+    if innum <= 9:
         return str(innum)
     else:
-        intToStr(innum // 10) + str(innum % 10)
+        return intToStr(innum // 10) + str(innum % 10)
 
 
 def intToStrUsingStck(innum):
@@ -24,4 +22,4 @@ def intToStrUsingStck(innum):
 
 
 #intToStrUsingStck(9234)
-intToStr(9234)
+print intToStr(9234)

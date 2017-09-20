@@ -8,24 +8,20 @@ outlst = []
 def buildSubsequences( s):
     for i in xrange(len(s)):
         outlst.append(s[i])
-        for j in xrange(i+1, len(s)):
-            outlst.append(s[i]+s[j])
 
-        r = i+1
-        while r < len(s):
-            p = r
-            while p < len(s):
-                q = 2
-                while (i+q) <=len(s):
-                    tmpstr = s[i] + s[p:p+q]
-                    if tmpstr not in outlst:
-                        outlst.append(tmpstr)
-                    q += 1
-                p += 1
-            r += 1
+        p = i + 1
+        while p < len(s):
+            q = 1
+            while (i+q) <=len(s):
+                tmpstr = s[i] + s[p:p+q]
+                if tmpstr not in outlst:
+                    outlst.append(tmpstr)
+                q += 1
+            p += 1
 
     # outlst.append(s)
     print sorted(outlst)
 
 
 buildSubsequences('abcde')
+# ['a', 'ab', 'abc', 'abcd', 'abcde', 'ac', 'acd', 'acde', 'ad', 'ade', 'ae', 'b', 'bc', 'bcd', 'bcde', 'bd', 'bde', 'be', 'c', 'cd', 'cde', 'ce', 'd', 'de', 'e']

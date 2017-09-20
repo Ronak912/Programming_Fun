@@ -25,9 +25,7 @@ def findPairs(inlst):
             if sum not in resdict:
                 resdict[sum] = [(outerval, innerval)]
             else:
-                tmpout = resdict.get(sum, [])
-                tmpout.append((outerval, innerval))
-                resdict[sum] = tmpout
+                resdict[sum].append((outerval, innerval))
 
     for key, val in sorted(resdict.items()):
         # delete values which does not make pairs
@@ -38,4 +36,4 @@ def findPairs(inlst):
 
 if __name__ == "__main__":
     lst = [5, 4, 6, 3, 10, 8]
-    print findPairs(lst)
+    findPairs(lst)

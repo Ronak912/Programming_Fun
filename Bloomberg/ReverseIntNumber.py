@@ -4,7 +4,7 @@ def reverseNumberIter(innum):
     outnumber = 0
     while innum:
         outnumber = (outnumber * 10) + innum % 10
-        innum = innum //10
+        innum //= 10
 
     return outnumber
 

@@ -4,7 +4,6 @@
 # We can also use 2D array which is easy to understand but required O(N^2) extra space
 
 # Formula to calculate number based on line and ith position
-# c(line, i) = line! / ((line-i)! * i!)
 # C(line, i)   = line! / ( (line-i)! * i! )
 # C(line, i-1) = line! / ( (line - i + 1)! * (i-1)! )
 # We can derive following expression from above two expressions.

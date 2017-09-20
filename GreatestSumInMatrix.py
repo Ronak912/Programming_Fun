@@ -1,5 +1,9 @@
 
-arr = [[4, 7, 1], [6, 9, 1], [50, 10, 45]]
+arr = [
+        [4, 7, 1],
+        [6, 9, 1],
+        [50, 10, 45]
+      ]
 
 def numberOfPaths(m, n):
     # If either given row number is first or given column number is first
@@ -32,7 +36,7 @@ def numberOfPathsUsingDP(m, n):
     # the recursive solution
     for i in xrange(1, m):
         for j in xrange(1, n):
-            # By uncommenting the last part the code calculatest he total
+            # By uncommenting the last part the code calculates the total
             # possible paths if the diagonal Movements are allowed
              lstdp[i][j] = lstdp[i-1][j] + lstdp[i][j-1]   # + count[i-1][j-1];
 

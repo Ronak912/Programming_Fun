@@ -18,3 +18,20 @@ for val in itertools.ifilter(iseven, [1, 2, 3, 4, 5, 6]):
 # Reduce
 sum = lambda x, y: x+y
 print reduce(sum, [1, 2, 3, 4, 5, 6])
+
+
+def filter_func(val):
+    return val % 2 == 0
+
+print filter(filter_func, [1,2,3,4])
+
+
+# Default value for mutable
+# notice when you call it second time, it will extend list which was created on first call
+def funcSample(n = []):
+    n.extend([1, 2, 3])
+    print n
+
+print "Func Sampleeee"
+funcSample()
+funcSample()

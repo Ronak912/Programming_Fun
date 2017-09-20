@@ -57,6 +57,7 @@ def maxLen(arr):
 
 def maxLen1(inlst):
     inlst.sort()
+    print inlst
 
     hashmap = {}
     sum, count = 0, 0
@@ -73,4 +74,4 @@ def maxLen1(inlst):
 
 
 if __name__ == '__main__':
-    print maxLen([15, -2, 2, -12, 1, 10, 13, 8, 4,5, 12])
+    print maxLen1([15, -2, 2, -12, 1, 10, 13, 8, 4,5, 12])

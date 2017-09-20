@@ -7,7 +7,7 @@ class Queue:
         return self.size == 0
 
     def enqueue(self, item):
-        self.items.insert(0, item)
+        self.items.append(item)
         self.size += 1
         return True
 
@@ -15,7 +15,7 @@ class Queue:
         if self.size == 0:
             return False
         self.size -= 1
-        return self.items.pop()
+        return self.items.pop(0)
 
     def getsize(self):
         return self.size

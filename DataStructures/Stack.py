@@ -5,18 +5,21 @@ class Stack(object):
 
     def push(self, value):
         self.size += 1
-        self.lst.insert(0, value)
+        self.lst.append(value)
 
     def pop(self):
         self.size -= 1
-        return self.lst.pop(0)
+        return self.lst.pop()
 
     def peek(self):
-        return self.lst[self.size - 1]
+        if self.isEmpty():
+            raise Exception("Stack is empty")
+        return self.lst[self.size - 1]  #or self.lst[-1]
+
 
     def peekbyidx(self, idx):
         if idx > self.size - 1 or idx < 0:
-            return "out of range"
+            raise Exception("out of range")
         return self.lst[self.size-1-idx]
 
     def getsize(self):
