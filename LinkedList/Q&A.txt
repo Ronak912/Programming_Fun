@@ -1,0 +1,55 @@
+Solved first 50 LinkedList questons from the below link
+http://www.geeksforgeeks.org/data-structures/linked-list/
+
+Function to check if a singly linked list is palindrome
+http://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
+
+
+Write a function to get the intersection point of two Linked Lists.
+http://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
+
+
+Remove duplicates from a sorted linked list
+http://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+
+
+Identical Linked List (Iterative and recursive solutions)
+http://www.geeksforgeeks.org/identical-linked-lists/
+
+
+Reverse a Linked List in groups of given size
+http://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
+
+
+Reverse alternate K nodes in a Singly Linked List
+http://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/
+
+
+Segregate even and odd nodes in a Linked List
+http://www.geeksforgeeks.org/segregate-even-and-odd-elements-in-a-linked-list/
+
+
+Detect and Remove Loop in a Linked List
+http://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
+
+
+Add two numbers represented by linked lists
+http://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
+
+
+Find a triplet from three linked lists with sum equal to a given number
+http://www.geeksforgeeks.org/find-a-triplet-from-three-linked-lists-with-sum-equal-to-a-given-number/
+
+
+Flattening a Linked List
+http://www.geeksforgeeks.org/flattening-a-linked-list/
+
+
+Add two numbers represented by linked lists
+http://www.geeksforgeeks.org/sum-of-two-linked-lists/
+
+
+Flatten multilever linked list
+http://www.geeksforgeeks.org/flatten-a-linked-list-with-next-and-child-pointers/
+
+

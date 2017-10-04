@@ -22,6 +22,17 @@ class LinkedList:
         curnode.next = new_node
         self.cur_node = temp
 
+    def add_node_after(self, prevnode, data):
+        new_node = Node(data)  # create a new node
+
+        if not prevnode:
+            print "Prev node is None"
+            return
+
+        new_node.next = prevnode.next
+        prevnode.next = new_node
+
+
     def delete(self, data):
 
         currentnode = self.cur_node
@@ -63,6 +74,7 @@ class LinkedList:
         while node:
             print node.data,
             node = node.next
+        print ''  # Go to next line
 
     def size(self):
         count = 0
@@ -70,9 +82,27 @@ class LinkedList:
         while current:
             count += 1
             current = current.next
-        print "Total Size: ", count
+        return count
 
+    #split given list into two and return first element of second half
+    def getMiddleElement(self):
+        currentnode = self.cur_node
+        slow, fast = currentnode, currentnode
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
 
+        return slow.data
+
+    #split given list into two and return first element of second half
+    def getMiddleNode(self):
+        currentnode = self.cur_node
+        slow, fast = currentnode, currentnode
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        return slow
 
     def reverseLinkList(self, head=None):
         prevnode = None
@@ -111,6 +141,16 @@ class LinkedList:
         slow.next = None
         return temp
 
+    # Delete node without traversing entire list
+    def deleteGivenNode(self, delnode):
+        tmp = delnode.next
+        delnode.data = tmp.date
+        delnode.next = tmp.next
+        tmp = None
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -122,10 +162,11 @@ if __name__ == '__main__':
     ll.add_node(5)
 
     ll.list_print()
-    ll.size()
+    print ll.size()
 
-    ll.getMiddleElement()
+    print ll.getMiddleElement()
 
     revhead = ll.reverseLinkList()
 
     ll.list_print(revhead)
+

@@ -1,0 +1,16 @@
+kth non-repeating characters
+http://www.geeksforgeeks.org/kth-non-repeating-character/
+
+
+Count number of substrings with exactly k distinct characters
+http://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/
+
+
+Find k’th character of decrypted string
+http://www.geeksforgeeks.org/find-kth-character-of-decrypted-string/
+
+
+Check if two strings are k-anagrams or not
+http://www.geeksforgeeks.org/check-two-strings-k-anagrams-not/
+
+
