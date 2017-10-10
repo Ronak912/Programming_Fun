@@ -14,3 +14,7 @@ Check if two strings are k-anagrams or not
 http://www.geeksforgeeks.org/check-two-strings-k-anagrams-not/
 
 
+Count substrings with same first and last characters
+http://www.geeksforgeeks.org/count-substrings-with-same-first-and-last-characters/
+
+
