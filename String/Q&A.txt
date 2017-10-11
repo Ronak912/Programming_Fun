@@ -18,3 +18,10 @@ Count substrings with same first and last characters
 http://www.geeksforgeeks.org/count-substrings-with-same-first-and-last-characters/
 
 
+Smallest window that contains all characters of string itself
+http://www.geeksforgeeks.org/smallest-window-contains-characters-string/
+
+
+Print common characters of two Strings in alphabetical order
+http://www.geeksforgeeks.org/print-common-characters-two-strings-alphabetical-order-2/
+
