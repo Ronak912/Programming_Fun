@@ -25,3 +25,10 @@ http://www.geeksforgeeks.org/smallest-window-contains-characters-string/
 Print common characters of two Strings in alphabetical order
 http://www.geeksforgeeks.org/print-common-characters-two-strings-alphabetical-order-2/
 
+
+Check if frequency of all characters can become same by one removal
+http://www.geeksforgeeks.org/check-if-frequency-of-all-characters-can-become-same-by-one-removal/
+
+
+Given a sequence of words, print all anagrams together | Set 1
+http://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/
