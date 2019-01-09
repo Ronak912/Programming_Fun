@@ -10,7 +10,7 @@ def lexiSort(num):
     maxsingledigit = 9
     for i in range(1, 10):
         sortedlst.append(i)
-        double
+        pass
 
 
 

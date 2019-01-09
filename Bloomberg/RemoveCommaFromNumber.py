@@ -3,7 +3,6 @@
 def removeComma(instr):
 
     inlst = list(instr)
-    print inlst
     offset = 0
     for idx in xrange(len(inlst)):
         if inlst[idx] == ',':

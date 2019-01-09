@@ -22,7 +22,8 @@ def list_dir(inuputdir, outputlst):
     currdir = inuputdir
     for fileordir in os.listdir(currdir):
         #print fileordir
-        fullpath = "{0}/{1}".format(currdir, fileordir)
+        # fullpath = "{0}/{1}".format(currdir, fileordir)
+        fullpath = os.path.join(currdir, fileordir)
         if not os.path.isdir(fullpath):
             #print "If"
             outputlst.append(fullpath)

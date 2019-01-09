@@ -16,7 +16,7 @@
 # Input: arr[] = {1, 0, 3}
 # Output: 1
 
-# ToDo: this is not proper solution and do not solve all the inputs
+# ToDo: this is not proper solution and does not work all the inputs
 
 # Returns the maximum length
 def maxLen(arr):
@@ -37,10 +37,10 @@ def maxLen(arr):
         # Add the current element to the sum
         curr_sum += arr[i]
 
-        if arr[i] is 0 and max_len is 0:
+        if arr[i] == 0 and max_len == 0:
             max_len = 1
 
-        if curr_sum is 0:
+        if curr_sum == 0:
             max_len = i+1
 
         # NOTE: 'in' operation in dictonary to search key takes O(1)

@@ -47,7 +47,29 @@ def GetUniqueFromSorted(inlst):
     print inlst
     return idx-1
 
+def getUniqueNumAndIndex1(arr):
+
+    j = 0
+    hashmap = {}
+    for i, val in enumerate(arr):
+        if val in hashmap:
+            hashmap[val] += 1
+        else:
+            arr[j] = val
+            hashmap[val] = 0
+            j += 1
+    while j < len(arr):
+        for key, val in hashmap.iteritems():
+            for i in xrange(val):
+                arr[j] = key
+                j += 1
+
+    return arr
+
 
 if __name__  ==  "__main__":
-    #print getUniqueNumAndIndex([3, 3, 4, 5, 5, 6, 8, 8, 7, 7, 7])
+    print getUniqueNumAndIndex([3, 3, 4, 5, 5, 6, 8, 8, 7, 7, 7])
+    print getUniqueNumAndIndex1([3, 3, 4, 5, 5, 6, 8, 8, 7, 7, 7])
     print GetUniqueFromSorted([3, 3, 3, 4, 4, 5, 5, 6, 7, 7, 7, 8, 8])
+
+

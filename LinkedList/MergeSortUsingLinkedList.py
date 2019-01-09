@@ -59,4 +59,4 @@ if __name__ == "__main__":
     ll.add_node(7)
 
     sortedlst = mergeSort(ll.cur_node)
-    # ll.list_print(ll.cur_node)
+    #ll.list_print(ll.cur_node)

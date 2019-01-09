@@ -3,6 +3,9 @@
 
 def findElement(arr, element, startidx, endidx):
 
+    if startidx < 0 or startidx > len(arr)-1 or endidx <0 or endidx > len(arr)-1:
+        return -1
+
     if arr[startidx] == element:
         return startidx
 
@@ -27,7 +30,7 @@ def findElement(arr, element, startidx, endidx):
 if __name__ == '__main__':
     #                    M
     arr = [4, 6, 8, 14, -20, -9, -2, 0, 3]
-    print findElement(arr, -9, 0, len(arr)-1)
+    print findElement(arr, 14, 0, len(arr)-1)
     #                    M
-    arr1 = [4, 6, 8, 14, 20, -9, -2, 0, 3]
-    print findElement(arr1, -9, 0, len(arr1)-1)
+    # arr1 = [4, 6, 8, 14, 20, -9, -2, 0, 3]
+    # print findElement(arr1, -9, 0, len(arr1)-1)

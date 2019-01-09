@@ -12,9 +12,25 @@ class Node:
 
 # Function to  print level order traversal of tree
 def printLevelOrder(root):
-    h = height(root)
-    for i in range(1, h+1):
-        printGivenLevel(root, i)
+    #method-1
+    # h = height(root)
+    # for i in range(1, h+1):
+    #     printGivenLevel(root, i)
+    queue = [root]
+    while queue:
+        vals = [node.data for node in queue]
+        for val in vals:
+            print val,
+        #method-2
+        # newq = []
+        # for node in queue:
+        #     if node.left:
+        #         newq.append(node.left)
+        #     if node.right:
+        #         newq.append(node.right)
+        # queue = newq
+        #method-3, list comprehension
+        queue = [leaf for node in queue for leaf in (node.left, node.right) if leaf]
 
 
 # Print nodes at a given level
@@ -105,18 +121,18 @@ root.left.right = Node(5)
 root.right.left = Node(6)
 root.right.right = Node(7)
 
-# print "Level order traversal of binary tree is -"
-# printLevelOrder(root)
+print "Level order traversal of binary tree is -"
+printLevelOrder(root)
 
-bstroot = Node(10)
-bstroot.left = Node(5)
-bstroot.right = Node(50)
-bstroot.left.left = Node(1)
-bstroot.right.left = Node(40)
-bstroot.right.right = Node(100)
-
-countSubTrees(bstroot, 1, 45)
-print "Count: ", count
-
-# http://www.geeksforgeeks.org/count-bst-nodes-that-are-in-a-given-range/
-print "Total Nodes: ", getCount(bstroot, 5, 45)
+# bstroot = Node(10)
+# bstroot.left = Node(5)
+# bstroot.right = Node(50)
+# bstroot.left.left = Node(1)
+# bstroot.right.left = Node(40)
+# bstroot.right.right = Node(100)
+#
+# countSubTrees(bstroot, 1, 45)
+# print "Count: ", count
+#
+# # http://www.geeksforgeeks.org/count-bst-nodes-that-are-in-a-given-range/
+# print "Total Nodes: ", getCount(bstroot, 5, 45)

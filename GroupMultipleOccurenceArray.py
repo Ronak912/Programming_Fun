@@ -10,7 +10,6 @@
 #
 # Input: arr[] = {4, 6, 9, 2, 3, 4, 9, 6, 10, 4}
 # Output:        {4, 4, 4, 6, 6, 9, 9, 2, 3, 10}
-
 def groupElements(inlst):
     disvallst = []
     hashmap = {}

@@ -84,7 +84,8 @@ class LinkedList:
             current = current.next
         return count
 
-    #split given list into two and return first element of second half
+    # this will split into two and return middle element, if length is odd it will return middle element
+    # else first element from the second half
     def getMiddleElement(self):
         currentnode = self.cur_node
         slow, fast = currentnode, currentnode
@@ -144,12 +145,9 @@ class LinkedList:
     # Delete node without traversing entire list
     def deleteGivenNode(self, delnode):
         tmp = delnode.next
-        delnode.data = tmp.date
+        delnode.data = tmp.data
         delnode.next = tmp.next
         tmp = None
-
-
-
 
 
 
@@ -167,6 +165,5 @@ if __name__ == '__main__':
     print ll.getMiddleElement()
 
     revhead = ll.reverseLinkList()
-
     ll.list_print(revhead)
 

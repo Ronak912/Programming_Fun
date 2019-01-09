@@ -1,5 +1,3 @@
-
-
 def findLongestIncreasingSubSequence(inlst):
     subarrlen = 1
     maxsubarraylen = -1

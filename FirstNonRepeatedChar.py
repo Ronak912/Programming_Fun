@@ -21,6 +21,25 @@ def firstNonRepeatedChar(inputstr):
 
     return None
 
+def firstNonRepeatedChar1():
+    ONE = "one"
+    MORE = 'more'
+
+    inputstr = "teeterr ronak rkao"
+    hastbl = {}
+    for char in inputstr:
+        if char not in hastbl:
+            hastbl[char] = ONE
+        else:
+            hastbl[char] = MORE
+
+
+    for char in inputstr:
+        val = hastbl.get(char, '')
+        if val == ONE:
+            print "First Non Repeated Char is: ", char, "   ", val
+            break
+
 print firstNonRepeatedChar("ronakonkxgr")
 
 

@@ -1,5 +1,5 @@
 def floor(a, b):
-    if not a or not b :
+    if not a or not b:
         return None
     if b == 1:
         return a

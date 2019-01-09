@@ -10,6 +10,9 @@ class MidTwo(Top):
     def hello2(self):
         return "MidTwo"
 
+    # def hello(self):
+    #     return "MidTwo hello"
+
 class Bottom(MidOne, MidTwo):
     pass
 

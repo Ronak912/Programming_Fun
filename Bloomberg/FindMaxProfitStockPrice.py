@@ -12,13 +12,14 @@ def findMaxProfit(pricelst):
 
         profit = price - minprice
 
-        if price < minprice:
-            minprice = price
-
         if profit > maxprofit:
             maxprofit = profit
             buyprice = minprice
             sellprice = price
+
+        if price < minprice:
+            minprice = price
+
 
 
     print "Bought at price ${0} and Sold at price ${1} and earned profit of ${2}".format(buyprice, sellprice, maxprofit)

@@ -15,6 +15,7 @@
 # of C and so on.
 
 # ToDo: output it incorrect and need to come up with better approach
+# possible soln: I think there is a employee (CEO possibly) who has no manager, means his key and val are same
 
 
 def countEmployees(indict):
