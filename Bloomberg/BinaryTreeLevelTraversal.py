@@ -61,6 +61,7 @@ def height(node):
             return lheight+1
         else:
             return rheight+1
+        # return 1 + max(lheight, rheight)
 
 
 count = 0

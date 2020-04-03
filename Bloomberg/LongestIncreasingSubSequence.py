@@ -24,8 +24,13 @@ def findLongestIncreasingSubSequence(inlst):
         else:
             startidx, subarrlen = idx, 1
 
-    return min_idx, max_idx, maxsubarraylen
+    #return min_idx, max_idx, maxsubarraylen
+    return inlst[min_idx:max_idx+1]
 
 
 if __name__ == "__main__":
-    print findLongestIncreasingSubSequence([20, 21, 22, 19, 18, 11, 12, 13, 14, 15, 5, 4, 6, 2, 3, 4, 5, 6, 7, 8])
+    #print findLongestIncreasingSubSequence([20, 21, 22, 19, 18, 11, 12, 13, 14, 15, 5, 4, 6, 2, 3, 4, 5, 6, 7, 8])
+    a1 = {'a':1, 'b':13, 'd':4, 'c':2, 'e':30}
+    a1_sorted_keys = sorted(a1, key=a1.get, reverse=True)[:2]
+    for r in a1_sorted_keys:
+        print(r, a1[r])

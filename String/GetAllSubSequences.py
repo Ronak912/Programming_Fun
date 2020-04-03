@@ -11,8 +11,10 @@ def getAllSubSequences(instr):
             substr = instr[i:j]
             outputset.add(substr)
 
-            for k in range(1, n):
+            #print(i, j, substr)
+            for k in range(1, len(substr)):
                 # remove kth element
+                #print(k)
                 substrtmp = substr[:k] + substr[k+1:]
                 outputset.add(substrtmp)
 

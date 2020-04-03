@@ -25,16 +25,17 @@ def getAllPrimeNumbers(n):
 def traditionalWayToGetAllPrimeNumbers(n):
     p = 3
     primenumlst = [2]
-    while p<=n:
+    while p <= n:
         k = 2
         while k < p:
+        # or while k <= math.sqrt(p):
             if p%k == 0:
                 break
             k += 1
         #print p, "==", k
         if p == k:
             primenumlst.append(p)
-        p +=1
+        p += 1
     print "Prime Numbers: ", primenumlst
 
 

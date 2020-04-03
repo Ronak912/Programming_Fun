@@ -15,18 +15,19 @@ class BinaryTree:
         self.root = None
 
     def isBSTUtil(self, node, min, max):
-        if node:
-            print "data: ", node.data, "==", min, "==", max
         if not node:
             return True
-        elif node.data < min or node.data > max:
+        if min and node.data < min:
             return False
-        else:
-            return (self.isBSTUtil(node.left, min, node.data-1) and self.isBSTUtil(node.right, node.data+1, max))
+        if max and node.data > max:
+            return False
+
+
+        return (self.isBSTUtil(node.left, min, node.data-1) and self.isBSTUtil(node.right, node.data+1, max))
 
 
     def isBST(self):
-        return self.isBSTUtil(self.root, 0, 15)
+        return self.isBSTUtil(self.root, None, None)
 
 
 if __name__ == "__main__":
@@ -38,4 +39,5 @@ if __name__ == "__main__":
     bst.root.left.right = Node(3)
     #bst.root.left.left.left = Node(10)
     bst.root.right.right = Node(11)
+    #bst.root.right.right.right = Node(5)
     print bst.isBST()

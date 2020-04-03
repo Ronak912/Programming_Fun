@@ -19,7 +19,7 @@ def findAllValuesUsingSort(lst, sumval):
         elif totalsum < sumval:
             i += 1
         else:
-            j -=1
+            j -= 1
     return outputlst
 
 def findAllValuesUsingHashmap(lst, sumval):
@@ -33,8 +33,6 @@ def findAllValuesUsingHashmap(lst, sumval):
             outputlst.append((value, desireval))
 
     return outputlst
-
-
 
 if __name__ == "__main__":
 

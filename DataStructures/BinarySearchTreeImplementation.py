@@ -115,10 +115,8 @@ class BinarySearchTree:
             res = self._get(key, self.root)
             if res:
                 return res.payload
-            else:
-                return None
-        else:
             return None
+        return None
 
     def _get(self, key, currentNode):
         if not currentNode:
@@ -258,8 +256,7 @@ class BinarySearchTree:
         left = self.getMaxDepth(node.leftChiLd)
         right = self.getMaxDepth(node.rightChild)
 
-        totaldepth = 1 + (left if left > right else right)
-        return totaldepth
+        return 1 + max(left, right)
 
     # This is asc sort traversal
     # LNR (Left, Node, Right)

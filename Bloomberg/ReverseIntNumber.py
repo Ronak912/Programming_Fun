@@ -1,4 +1,4 @@
-
+import sys
 
 def reverseNumberIter(innum):
     outnumber = 0
@@ -9,6 +9,14 @@ def reverseNumberIter(innum):
     return outnumber
 
 
+def reverNumberRecur(innum, revnum=0):
+    if innum <=0:
+        return revnum + innum
+    revnum = revnum *10 + innum%10
+    return reverNumberRecur(innum//10, revnum)
+
+
+
 if __name__ == '__main__':
-    #print reverseNumberRecur(12345)
-    print reverseNumberIter(12345)
+    #print reverNumberRecur(123405)
+    print reverseNumberIter(123405)

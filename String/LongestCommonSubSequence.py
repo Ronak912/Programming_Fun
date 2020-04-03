@@ -38,6 +38,16 @@ def getLongestCommonSubSequence(a, b):
 
     print("Longest Common SubSequence: ", ''.join(lcs))
 
+
+def lcsRecur(X, Y, m, n):
+
+    if m == 0 or n == 0:
+       return 0
+    elif X[m-1] == Y[n-1]:
+       return 1 + lcsRecur(X, Y, m-1, n-1)
+    else:
+       return max(lcsRecur(X, Y, m, n-1), lcsRecur(X, Y, m-1, n))
+
 if __name__ == "__main__":
     # Get longest common subsequence
     getLongestCommonSubSequence("ABCDGH", "AEDFHR")

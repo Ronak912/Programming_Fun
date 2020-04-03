@@ -4,6 +4,9 @@
 
 from DataStructures import BinarySearchTreeImplementation as bst
 
+#ToDo: check this for correct solutions
+# https://leetcode.com/submissions/detail/201508768/
+
 if __name__ == "__main__":
     mytree = bst.BinarySearchTree()
 
